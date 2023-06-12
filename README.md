@@ -73,4 +73,4 @@ DB_PORT=5432
 Документация доступна по эндпойнту: http://localhost/redoc/
 
 
-https://github.com/Kycaka/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+(https://github.com/Kycaka/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
