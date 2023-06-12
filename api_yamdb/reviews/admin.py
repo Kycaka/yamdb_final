@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.db.models import Avg
+
 from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 
 
