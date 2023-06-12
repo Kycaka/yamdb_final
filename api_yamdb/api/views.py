@@ -1,5 +1,14 @@
 from smtplib import SMTPResponseException
 
+from api.filters import TitleFilter
+from api.mixins import GetListCreateDeleteMixin
+from api.permissions import (IsAdminModeratorAuthor, IsAdminOrReadOnly,
+                             IsAdminUser)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             CreateTokenSerializer, CreateUserSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             TitleGetSerializer, TitleSerializer,
+                             UserSerializer)
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
@@ -12,26 +21,9 @@ from rest_framework.filters import SearchFilter
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from api.filters import TitleFilter
-from api.mixins import GetListCreateDeleteMixin
-from api.permissions import IsAdminModeratorAuthor, IsAdminOrReadOnly
-from api.serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    CreateTokenSerializer,
-    CreateUserSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleGetSerializer,
-    TitleSerializer,
-    UserSerializer,
-)
-
 from reviews.models import Review
 from titles.models import Category, Genre, Title
 from user.models import User
-from api.permissions import IsAdminUser
 
 
 class TitleViewSet(viewsets.ModelViewSet):

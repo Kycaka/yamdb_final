@@ -1,7 +1,6 @@
+from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.contrib.auth import get_user_model
-
 from reviews.validators import validate_year
 
 
