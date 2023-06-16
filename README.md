@@ -18,13 +18,6 @@ cd infra_sp2
 cd api_yamdb
 ```
 
-## Как запустить проект:
-
-Клонировать репозиторий
-```
-git clone https://github.com/askwlc/infra_sp2.git
-```
-
 Перейти в папку:
 ```
 cd infra
