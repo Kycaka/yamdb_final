@@ -46,5 +46,5 @@ DB_PORT=5432
 ### Документация API YaMDb
 Документация доступна по эндпойнту: http://localhost/redoc/
 
-### Server IP 62.84.126.121
+### Server IP 51.250.84.175
 
