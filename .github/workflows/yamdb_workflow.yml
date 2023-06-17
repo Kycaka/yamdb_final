@@ -74,7 +74,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull tomhater/yamdb_final:latest
             sudo docker compose stop
             sudo docker compose rm -f web
             sudo systemctl stop nginx
