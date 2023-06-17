@@ -74,8 +74,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker compose stop
-            sudo docker compose rm web
+            sudo docker pull tomhater/yamdb_final:latest
+            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker run --rm -d -p 5000:5000 tomhater/yamdb_final:latest
             sudo systemctl stop nginx
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
