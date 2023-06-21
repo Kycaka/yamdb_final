@@ -1,47 +1,20 @@
 [![Django-app workflow](https://github.com/Kycaka/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/Kycaka/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
-# API_YAMDB
-REST API проект для сервиса YaMDb — сбор отзывов о фильмах, книгах или музыке.
 
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
+[![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/)
+[![gunicorn](https://img.shields.io/badge/-gunicorn-464646?style=flat-square&logo=gunicorn)](https://gunicorn.org/)
+[![docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/)
+[![GitHub%20Actions](https://img.shields.io/badge/-GitHub%20Actions-464646?style=flat-square&logo=GitHub%20actions)](https://github.com/features/actions)
+[![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)
+[![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)](https://www.django-rest-framework.org/)
+[![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 ## Описание
-
-Проект YaMDb собирает отзывы пользователей на произведения.
-Произведения делятся на категории: «Книги», «Фильмы», «Музыка».
-Список категорий  может быть расширен (например, можно добавить категорию «Изобразительное искусство» или «Ювелирка»).
-### Как запустить проект:
-
-Все описанное ниже относится к ОС Linux.
-Клонируем репозиторий и переходим в него:
-```bash
-git clone https://github.com/Kycaka/infra_sp2
-cd infra_sp2
-cd api_yamdb
-```
-
-Перейти в папку:
-```
-cd infra
-```
-Развернуть контейнеры:
-```
-docker-compose up 
-```
-Сделать миграции, суперпользователя и собрать статику:
-```
-docker-compose exec web python manage.py migrate
-docker-compose exec web python manage.py createsuperuser
-docker-compose exec web python manage.py collectstatic --no-input
-```
-
-### Шаблон наполнения .env (не включен в текущий репозиторий) расположенный по пути infra/.env
-```
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=postgres
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-DB_HOST=db
-DB_PORT=5432
-```
-
-### Документация API YaMDb
-Документация доступна по эндпойнту: http://localhost/redoc
+### Возможности проекта
+Представляет собой расширение возможностей проекта YaMDB для совершения удаленных операций.   
+Благодаря этому проекту зарегистрированные и аутентифицированные пользователи получают 
+возможность оставлять рецензии на произведения различных категорий, 
+комментировать рецензии других пользователей,просматривать сформированные на основе оценок рейтинги произведений. 
+Сайт не предоставляет прямой доступ или ссылки для ознакомления непосредственно с произведениями.
+### Расширение функциональности
+Функционал проекта адаптирован для использования PostgreSQL и развертывания в контейнерах Docker. Используются инструменты CI и CD.
